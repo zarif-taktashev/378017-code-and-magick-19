@@ -41,7 +41,6 @@ window.renderStatistics = function (ctx, names, times) {
     var saturation = 10 * i;
     ctx.fillStyle = names[i] === 'Вы' ? 'rgba(255, 0, 0, 1)' : 'hsl(250, ' + saturation + '%, 50%)';
     var columnHeight = (MAX_COLUMN_HEIGHT * Math.round(times[i]) * (-1)) / maxTime;
-    console.log(START_Y + columnHeight)
     ctx.fillText(Math.round(times[i]), START_X + (GAP + COLUMN_WIDTH) * i, START_Y + columnHeight - 10);
     ctx.fillRect(START_X + (GAP + COLUMN_WIDTH) * i, START_Y, COLUMN_WIDTH, columnHeight);
   }
